@@ -1,3 +1,5 @@
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -6,7 +8,7 @@ const Home = () => {
             <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: 'url("./bg.jpg")' }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="absolute inset-0 flex justify-center items-center">
-                    <div className="bg-gray-800 bg-opacity-70 mx-16 p-10 rounded-lg text-center text-white">
+                    <div className="bg-gray-800 bg-opacity-70 mx-5 md:mx-16 p-10 rounded-lg text-center text-white">
                         <h1 className="font-bold text-4xl md:text-6xl">Rush Hour</h1>
                         <p className="mt-4 text-lg md:text-xl">
                             Get ready for an exciting and mind-bending adventure!
@@ -14,6 +16,22 @@ const Home = () => {
                         <p className="mt-2 text-lg">
                             The Rush Hour is an event where you and your team will race against the clock to solve riddles, complete tasks, and uncover hidden clues scattered around the campus. Are you ready to test your wits and teamwork?
                         </p>
+                        {/* code box */}
+                        <div className="flex flex-col justify-center items-center py-10">
+                            <h2 className="mb-4 font-semibold text-xl">Go To Level Code Page</h2>
+                            <div className="inline-flex items-center gap-4">
+                                <Link
+                                    to="/codeBox"
+                                    className="inline-flex items-center bg-blue-500 hover:bg-blue-600 shadow-md px-6 py-3 rounded-lg font-semibold text-white transition-colors"
+                                    aria-label="Go to Level Code Page"
+                                >
+                                    Click Here
+                                    <span className="ml-2">
+                                        <FaArrowRightLong />
+                                    </span>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,6 +43,7 @@ const Home = () => {
                     The Rush Hour is an event where you and your team will race against the clock to solve riddles, complete tasks, and uncover hidden clues scattered around the campus. Are you ready to test your wits and teamwork?
                 </p>
             </div>
+
 
             {/* How It Works */}
             <div className="bg-amber-50 py-12">
