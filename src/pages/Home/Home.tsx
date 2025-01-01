@@ -40,7 +40,7 @@ const Home = () => {
             <div className="bottom-0 flex justify-center items-center bg-[#2C1B07] p-5 w-full">
                 <p className="inline-flex flex-row items-center gap-3 text-center text-white">Contact Rotaract SIET:
                     {/* <span className=""> */}
-                    <a href=''>
+                    <a href='https://instagram.com'>
                         <FaInstagram />
                     </a>
                     <a href=''>
@@ -99,7 +99,7 @@ const Home = () => {
             </div>
 
             {/* Exclusive Prize Section */}
-            <div className="bg-amber-200 py-12">
+            <div className="py-12">
                 <div className="mx-auto px-5 max-w-4xl text-center">
                     <h2 className="font-semibold text-3xl text-amber-600">Exclusive Prize!</h2>
                     <p className="mt-4 text-lg">
@@ -115,7 +115,7 @@ const Home = () => {
             </div>
 
             {/* Final Message Section */}
-            <div className="bg-amber-200 py-12">
+            <div className="py-12">
                 <div className="mx-auto px-5 max-w-4xl text-center">
                     <h2 className="font-semibold text-3xl text-amber-600">Are You Ready?</h2>
                     <p className="mt-4 text-lg">
@@ -125,9 +125,9 @@ const Home = () => {
                 </div>
             </div>
 
-        <div className="">
-            <Footer/>
-        </div>
+            <div className="bg-amber-50">
+                <Footer />
+            </div>
 
         </div>
     );

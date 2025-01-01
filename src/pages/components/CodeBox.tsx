@@ -27,9 +27,7 @@ const CodeBox = () => {
         } else {
             alert("Try Again! or Enter the Code Properly")
         }
-
     }
-
 
     return (
         <>
@@ -48,9 +46,7 @@ const CodeBox = () => {
                     <div className="flex flex-col justify-center items-center px-5 h-full">
                         {
                             !showRiddle
-
                                 ?
-
                                 <div className="bg-white shadow-md p-5 rounded-lg w-[80%] md:w-[40%]">
                                     <form method="post" action="" className="space-y-4" onSubmit={handleSubmit}>
                                         <label htmlFor="code" className="block font-medium text-gray-700 text-lg">

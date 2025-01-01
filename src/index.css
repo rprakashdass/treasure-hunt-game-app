@@ -11,5 +11,9 @@
 }
 
 body{
-  background-color: #ecccb9;
+  background-color: #dad0cb;
+}
+
+::selection{
+  background-color: #e7b59c;
 }
