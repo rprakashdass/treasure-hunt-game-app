@@ -1,5 +1,5 @@
 import Login from "./Login/Login";
-import FlipCard from "./FlipCard/FlipCard";
+import Home from "./Home/Home";
 
 export {Login};
-export {FlipCard};
+export default Home;

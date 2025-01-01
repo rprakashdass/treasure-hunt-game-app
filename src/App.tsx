@@ -1,10 +1,9 @@
-import {FlipCard} from "./pages/";
+import Home from "./pages/";
 
 const App = () => {
   return (
     <>
-      <div className="text-center">App</div>
-      <FlipCard/>
+      <Home/>
     </>
   )
 }
