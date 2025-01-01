@@ -1,5 +1,7 @@
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { SiGmail } from "react-icons/si";
+import Footer from "../components/Footer";
 
 const Home = () => {
     return (
@@ -34,6 +36,18 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="bottom-0 flex justify-center items-center bg-[#2C1B07] p-5 w-full">
+                <p className="inline-flex flex-row items-center gap-3 text-center text-white">Contact Rotaract SIET:
+                    {/* <span className=""> */}
+                    <a href=''>
+                        <FaInstagram />
+                    </a>
+                    <a href=''>
+                        <SiGmail />
+                    </a>
+                    {/* </span> */}
+                </p>
             </div>
 
             {/* Event Overview Section */}
@@ -110,6 +124,11 @@ const Home = () => {
                     <p className="mt-6 font-bold text-xl">See you on January 4th for an unforgettable adventure!</p>
                 </div>
             </div>
+
+        <div className="">
+            <Footer/>
+        </div>
+
         </div>
     );
 };
