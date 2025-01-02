@@ -82,10 +82,10 @@ const CodeBox = () => {
                                     <p>
                                         {riddle?.riddle}
                                     </p>
-                                    <a
+                                    {/* <a
                                         href=""
                                         className="bg-blue-500 px-5 py-3 rounded-lg">Enter Next Riddle Code
-                                    </a>
+                                    </a> */}
                                 </div>
                         }
                         {/* <div className="inline-flex relative justify-start items-start my-5 text-left">
