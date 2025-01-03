@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { questions } from "../data/questions";
 import randomGenerator from "./randomGenerator";
 
@@ -20,6 +20,37 @@ const Questions = ({ riddle }: { riddle: string }) => {
     const [generatedQuestions] = useState(initialGeneratedQuestions);
     const [correctAnswers, setCorrectAnswers] = useState<number>(0);
     const [isFinished, setIsFinished] = useState<boolean>(false);
+    const [penaltyActive, setPenaltyActive] = useState<boolean>(false);
+    const [remainingPenalty, setRemainingPenalty] = useState<number>(0);
+
+    useEffect(() => {
+        const penaltyStartTime = localStorage.getItem("penaltyStartTime");
+        const now = Date.now();
+        const penaltyDuration = 3 * 60 * 1000;
+
+        if (penaltyStartTime) {
+            const elapsedTime = now - parseInt(penaltyStartTime, 10);
+            if (elapsedTime < penaltyDuration) {
+                setPenaltyActive(true);
+                setRemainingPenalty(penaltyDuration - elapsedTime);
+
+                const timer = setInterval(() => {
+                    const remaining = penaltyDuration - (Date.now() - parseInt(penaltyStartTime, 10));
+                    if (remaining <= 0) {
+                        setPenaltyActive(false);
+                        localStorage.removeItem("penaltyStartTime");
+                        clearInterval(timer);
+                    } else {
+                        setRemainingPenalty(remaining);
+                    }
+                }, 1000);
+
+                return () => clearInterval(timer);
+            } else {
+                localStorage.removeItem("penaltyStartTime");
+            }
+        }
+    }, []);
 
     const handleAnswerSelect = (option: string) => {
         if (selectedOption) return;
@@ -40,6 +71,30 @@ const Questions = ({ riddle }: { riddle: string }) => {
         }, 0);
     };
 
+    const startPenalty = () => {
+        const now = Date.now();
+        localStorage.setItem("penaltyStartTime", now.toString());
+        setPenaltyActive(true);
+        setRemainingPenalty(3 * 60 * 1000);
+    };
+
+    if (isFinished && correctAnswers < 3 && !penaltyActive) {
+        startPenalty();
+    }
+
+    if (penaltyActive) {
+        return (
+            <div className="flex flex-col items-center">
+                <h1 className="mb-4 font-bold text-2xl text-red-600">
+                    Penalty Active!
+                </h1>
+                <p className="mb-4 text-center text-lg">
+                    You can try again in {Math.ceil(remainingPenalty / 1000)} seconds.
+                </p>
+            </div>
+        );
+    }
+
     if (isFinished) {
         return (
             <div className="flex flex-col items-center">
@@ -50,15 +105,10 @@ const Questions = ({ riddle }: { riddle: string }) => {
                 </h1>
                 <p className="mb-4 text-center text-lg">
                     {correctAnswers >= 3
-                        ? ``
-                        : `You need at least 3 points to unlock the next level! You can try again with a +3 minute penalty.`}
-                    <br></br>
-                    {correctAnswers < 3
-                        ? ``
-                        : `${riddle}`
-                    }
+                        ? `${riddle}`
+                        : "You need at least 3 points to unlock the next level! You can try again after 3 minutes."}
                 </p>
-            </div >
+            </div>
         );
     }
 
