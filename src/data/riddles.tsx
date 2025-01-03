@@ -41,7 +41,7 @@ export const riddles: {
             code: "8B4513",
             riddle:
                 <div className="flex flex-col justify-center items-center gap-5 text-white">
-                    <div className="bg-black w-80 h-52">
+                    <div className="bg-black p-2 w-80 h-52">
                         <img
                             src=""
                             alt=""

@@ -28,6 +28,11 @@ const CodeBox = () => {
             alert("Try Again! or Enter the Code Properly")
         }
     }
+
+    const handleNextCode = () => {
+        window.location.reload();
+    }
+
     return (
         <>
             {/* banner */}
@@ -81,20 +86,15 @@ const CodeBox = () => {
                                     <p>
                                         {riddle?.riddle}
                                     </p>
-                                    {/* <a
-                                        href=""
-                                        className="bg-blue-500 px-5 py-3 rounded-lg">Enter Next Riddle Code
-                                    </a> */}
+                                    {/* Button for next code */}
+                                    <button
+                                        onClick={handleNextCode}
+                                        className="bg-blue-500 hover:bg-blue-600 mt-4 px-3 py-2 rounded-lg font-semibold text-white"
+                                    >
+                                        Enter Next Level Code
+                                    </button>
                                 </div>
                         }
-                        {/* <div className="inline-flex relative justify-start items-start my-5 text-left">
-                            <Link
-                                to="/"
-                                className="px-5 py-3 rounded-lg text-black text-xl button"
-                            >
-                                Home
-                            </Link>
-                        </div> */}
                     </div>
 
                 </div>
