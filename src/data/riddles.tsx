@@ -35,23 +35,26 @@ export const riddles: {
             answer: "Food Court",
             redirect: ""
         },
-
         {
             id: 5,
             code: "8B4513",
             riddle:
                 <div className="flex flex-col justify-center items-center gap-5 text-white">
-                    <div className="bg-black p-2 w-80 h-52">
+                    <div className="relative flex justify-center items-center w-80 h-52 overflow-hidden">
                         <img
-                            src=""
-                            alt=""
+                            src="/seedPen.png"
+                            alt="Seed Pen"
+                            className="w-full h-full object-contain"
                         />
                     </div>
-                    <h3 className="text-xl">Find this Object in the riddles place</h3>
-                    <p className="text-center">
-                        I’m made of metal has net on top With a stone bench, perfect to seat. Small and sturdy, I’m built to last, What am I, where you can relax and rest fast?
+                    <h3 className="p-3 text-xl">Find this Object in the riddles place</h3>
+                    <p className="p-3 text-center">
+                        I’m made of metal has net on top With a stone bench, perfect to seat.
+                        Small and sturdy, I’m built to last, What am I, where you can relax and
+                        rest fast?
                     </p>
-                </div>,
+                </div>
+            ,
             answer: "A hut",
             redirect: ""
         },
