@@ -27,7 +27,7 @@ const Contacts = () => {
                         <FaInstagram />
                     </a>
                     <a
-                        href="mailto:example@gmail.com"
+                        href="mailto:rotaractsiet2425@gmail.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-2xl text-white hover:text-gray-300"
@@ -65,7 +65,7 @@ const Contacts = () => {
                         Created with ❤️ by{' '}
                         <a
                             className="hover:text-blue-300 underline"
-                            href="https://rprakashdass.in"
+                            href="https://www.rprakashdass.in"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -81,7 +81,7 @@ const Contacts = () => {
                 <p className="inline-flex flex-row items-center gap-3 text-center text-white">
                     For more updates, follow Rotaract SIET:
                     <a
-                        href="https://instagram.com"
+                        href="https://instagram.com/rotaractsiet"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white hover:text-gray-300"
