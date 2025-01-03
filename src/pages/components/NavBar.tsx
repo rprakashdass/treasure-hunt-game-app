@@ -17,12 +17,17 @@ const NavBar = () => {
                 </a>
             )}
             <Link
-                onClick={() => window.location.reload()}
+                onClick={() => {
+                    if (window.location.pathname === "/codeBox") {
+                        window.location.reload();
+                    }
+                }}
                 to="/codeBox"
                 className="w-full text-center text-xl list-none"
             >
                 Code Box
             </Link>
+
         </div>
     );
 };
