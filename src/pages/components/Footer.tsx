@@ -19,7 +19,7 @@ const Contacts = () => {
                 </div>
                 <div className="flex justify-center items-center gap-5">
                     <a
-                        href="https://instagram.com"
+                        href="https://instagram.com/rotaractsiet"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-2xl text-white hover:text-gray-300"
