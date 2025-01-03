@@ -1,7 +1,7 @@
 import Home, { CodeBox } from "./pages/";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Page from "./pages/Level/l1/Page";
 import NavBar from "./pages/components/NavBar";
+import Questions from "./pages/Questions";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <NavBar/>
       <Routes>
         <Route path="/" element= {<Home/>}/>
-        <Route path="/level" element= {<Page/>}/>
+        <Route path="/level" element= {<Questions/>}/>
         <Route path="/codeBox" element= {<CodeBox/>}/>
       </Routes>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { riddles } from "../../data/riddles";
-// import { Link } from "react-router-dom";
+
 
 const CodeBox = () => {
     const codeRef = useRef<HTMLInputElement>(null);
@@ -9,7 +9,7 @@ const CodeBox = () => {
     const [riddle, setRiddle] = useState<{
         id: number,
         code: string,
-        riddle: string,
+        riddle: string | JSX.Element,
         answer: string
     } | null>(null);
 
@@ -28,7 +28,6 @@ const CodeBox = () => {
             alert("Try Again! or Enter the Code Properly")
         }
     }
-
     return (
         <>
             {/* banner */}
@@ -76,7 +75,7 @@ const CodeBox = () => {
                                     style={{
                                         backgroundColor: `#${riddle?.code}`
                                     }}
-                                    className="flex flex-col justify-between items-center shadow-md p-5 rounded-lg w-[80%] min-h-[20%] text-md"
+                                    className="flex flex-col justify-between items-center bg-white shadow-md p-5 rounded-lg w-[80%] min-h-[20%] text-md"
                                 >
 
                                     <p>
