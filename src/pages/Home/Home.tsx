@@ -1,6 +1,5 @@
-import { FaArrowRightLong, FaInstagram } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { SiGmail } from "react-icons/si";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -37,18 +36,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="bottom-0 flex justify-center items-center bg-[#2C1B07] p-5 w-full">
+            {/* <div className="bottom-0 flex justify-center items-center bg-[#2C1B07] p-5 w-full">
                 <p className="inline-flex flex-row items-center gap-3 text-center text-white">Contact Rotaract SIET:
-                    {/* <span className=""> */}
                     <a href='https://instagram.com'>
                         <FaInstagram />
                     </a>
                     <a href=''>
                         <SiGmail />
                     </a>
-                    {/* </span> */}
                 </p>
-            </div>
+            </div> */}
 
             {/* Event Overview Section */}
             <div className="mx-auto px-5 py-10 max-w-4xl">
@@ -58,33 +55,51 @@ const Home = () => {
                 </p>
             </div>
 
-
             {/* How It Works */}
             <div className="bg-amber-50 py-12">
                 <div className="mx-auto px-5 max-w-4xl">
                     <h2 className="font-semibold text-3xl text-amber-600 text-center">How It Works</h2>
                     <div className="space-y-6 mt-8">
                         <div className="text-lg">
-                            <h3 className="font-semibold">1. Initial</h3>
+                            <h3 className="font-semibold">1. Starting Point</h3>
                             <p>
-                                You’ll receive an initial quiz with clues pointing to the first hidden location. Solve the riddle, and you'll get a number that you'll need to enter on our event website.
+                                Begin with a quick game at the starting point to earn your initial code. This code sets you up for the adventure ahead.
                             </p>
                         </div>
                         <div className="text-lg">
-                            <h3 className="font-semibold">2. Task Stations</h3>
+                            <h3 className="font-semibold">2. Solve the Riddle</h3>
                             <p>
-                                Once the correct number is submitted, a new location will appear on the website. At each location, one of our team members will assign you a fun and engaging task. Tasks will range from creative challenges to physical activities that will test your problem-solving and collaboration skills.
+                                Use your wits to crack the riddle and uncover the next location in your journey.
                             </p>
                         </div>
                         <div className="text-lg">
-                            <h3 className="font-semibold">3. Unlocking the Next Clue</h3>
+                            <h3 className="font-semibold">3. Enter the Code</h3>
                             <p>
-                                After successfully completing each task, you'll receive the next location, taking you closer to the final treasure. Only the team that solves all six riddles and completes all tasks will be victorious!
+                                Head to the discovered spot and enter the code on our event website to proceed.
+                            </p>
+                        </div>
+                        <div className="text-lg">
+                            <h3 className="font-semibold">4. Complete the Task</h3>
+                            <p>
+                                Each location features a unique task or quiz. Complete it successfully to unlock your next clue.
+                            </p>
+                        </div>
+                        <div className="text-lg">
+                            <h3 className="font-semibold">5. Advance with the Clue</h3>
+                            <p>
+                                Solve the newly revealed riddle and progress to the following spot. Keep solving and moving forward!
+                            </p>
+                        </div>
+                        <div className="text-lg">
+                            <h3 className="font-semibold">6. Final Score</h3>
+                            <p>
+                                Your total time, minus any penalties, determines your rank. The fastest solver wins, while the second fastest earns the runner-up spot.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             {/* Rules and Guidelines */}
             <div className="mx-auto px-5 py-12 max-w-4xl">

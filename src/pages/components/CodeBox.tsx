@@ -29,10 +29,6 @@ const CodeBox = () => {
         }
     }
 
-    const handleNextCode = () => {
-        window.location.reload();
-    }
-
     return (
         <>
             {/* banner */}
@@ -86,13 +82,6 @@ const CodeBox = () => {
                                     <p>
                                         {riddle?.riddle}
                                     </p>
-                                    {/* Button for next code */}
-                                    <button
-                                        onClick={handleNextCode}
-                                        className="bg-blue-500 hover:bg-blue-600 mt-4 px-3 py-2 rounded-lg font-semibold text-white"
-                                    >
-                                        Enter Next Level Code
-                                    </button>
                                 </div>
                         }
                     </div>
