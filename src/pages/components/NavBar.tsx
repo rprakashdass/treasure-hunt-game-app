@@ -4,7 +4,7 @@ const NavBar = () => {
     const location = useLocation();
 
     return (
-        <div className="flex flex-row justify-center items-center gap-5 md:hidden bg-gray-100 p-2 font-semibold text-black">
+        <div className="flex flex-row justify-center items-center gap-5 md:hidden bg-gray-100 p-2 font-semibold text-[#a07d56]">
             <Link to="/" className="w-full text-center text-xl list-none">
                 Home
             </Link>
